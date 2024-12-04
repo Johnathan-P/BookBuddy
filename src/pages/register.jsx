@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate} from 'react-router-dom'
 import { useState, useEffect } from "react";
 
 
 
 export default function register() {
+    let navigate = useNavigate();
     const [firstname, setfirstName] = useState("");
     const [lastname, setlastName] = useState("");
     const [email, setEmail] = useState("");
@@ -27,6 +28,8 @@ export default function register() {
             });
             const result = await response.json();
             console.log(result);
+            alert('success!')
+            navigate("/login")
         }
         catch(error){console.log(error)}
     }
