@@ -25,7 +25,11 @@ export default function bookid() {
 
   return (
     <div>
-      
+      <button onClick={GETBOOK}>Get Book Info</button>
+      <h1>{book.title}</h1>
+      <h2>{book.author}</h2>
+      <img src={book.coverimage}></img>
+      <p>{book.description}</p>
     </div>
   );
 }
